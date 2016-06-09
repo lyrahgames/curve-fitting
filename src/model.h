@@ -74,8 +74,21 @@ inline std::string testModelString(float *param){
 	return tmp;
 }
 
-inline float exp_param(float x, float *param){
-	return param[0] * x * exp(param[1] * x);
+inline float expModel(float x, float *param){
+	return param[0] * exp(param[1] * x);
+}
+
+inline std::string expModelString(float *param){
+	char buffer[10];
+
+	sprintf(buffer, "%f\0", param[0]);
+	std::string tmp = buffer;
+	tmp += "*exp(";
+	sprintf(buffer, "%f\0", param[1]);
+	tmp += buffer;
+	tmp += "*x)";
+
+	return tmp;	
 }
 
 

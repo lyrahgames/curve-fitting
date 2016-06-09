@@ -22,14 +22,14 @@ int main(int argc, char **argv){
 	srand(time(NULL));
 
 	// initialize parameter
-	const uint param_count = 1;
-	const paramff model = sin2Model;
-	const paramffstr model_str = sin2ModelString;
-	const float tmp_init_param[] = {2.8f, 1.0f, 1.0f}; 
+	const uint param_count = 2;
+	const paramff model = expModel;
+	const paramffstr model_str = expModelString;
+	const float tmp_init_param[] = {400.0f, 0.1f, 1.0f}; 
 	// const float tmp_init_param[] = {0.01f, 0.1f, 0.001f};
 	const std::vector<float> init_param(tmp_init_param, tmp_init_param + param_count) ;
 	// init_param[0] = init_param[1] = init_param[2] = 1.0f;
-	const char* file_path = "../data/rand-nonlin-data";
+	const char* file_path = "../data/exp-data";
 	
 	// load data to be fitted
 	std::vector<float> x_data, y_data;

@@ -1,4 +1,4 @@
-TARGET = nonlin-model-2.exe
+TARGET = exp-model-2.exe
 
 HEADERS = \
 	../../src/gn-fit.h \
