@@ -11,7 +11,7 @@ const float sa_temp_max = 1000.0f;
 const float sa_temp_min = 1e-6f;
 const float sa_temp_factor = 0.999f;
 const uint sa_it_max = 1;
-const float sa_param_max = 0.1f;
+const float sa_param_max = 10.0f;
 const float sa_param_min = 0.0f;
 
 

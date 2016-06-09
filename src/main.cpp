@@ -22,14 +22,14 @@ int main(int argc, char **argv){
 	srand(time(NULL));
 
 	// initialize parameter
-	const uint param_count = 3;
-	const paramff model = testModel;
-	const paramffstr model_str = testModelString;
-	const float tmp_init_param[] = {1.0f, 1.0f, 1.0f}; 
-	// const std::vector<float> init_param = {0.01f, 0.1f, 0.001f};
+	const uint param_count = 1;
+	const paramff model = sin2Model;
+	const paramffstr model_str = sin2ModelString;
+	const float tmp_init_param[] = {2.8f, 1.0f, 1.0f}; 
+	// const float tmp_init_param[] = {0.01f, 0.1f, 0.001f};
 	const std::vector<float> init_param(tmp_init_param, tmp_init_param + param_count) ;
 	// init_param[0] = init_param[1] = init_param[2] = 1.0f;
-	const char* file_path = "../data/test-data-1";
+	const char* file_path = "../data/rand-nonlin-data";
 	
 	// load data to be fitted
 	std::vector<float> x_data, y_data;
@@ -93,7 +93,7 @@ int main(int argc, char **argv){
 	}
 
 	if (isValid(gn_param.data(), param_count)){
-		fprintf(gp_pipe, "replot %s title 'LM'\n", model_str(gn_param.data()).c_str());
+		fprintf(gp_pipe, "replot %s title 'GN'\n", model_str(gn_param.data()).c_str());
 	}
 
 	fclose(gp_pipe);
