@@ -1,0 +1,847 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"sqmag"
+			],
+			[
+				"gu",
+				"gui::Control	(main.cpp)"
+			],
+			[
+				"v",
+				"vec"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/Gnuplot/gnuplot.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Gnuplot/gnuplot.sublime-build",
+					""
+				],
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Gnuplot/gnuplot.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 79.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git pul",
+				"Git: Pull"
+			],
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"gist",
+				"Gist: Open Gist"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"clo",
+				"Project: Close"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"run",
+				"ProjectTreeTemplater: Run"
+			],
+			[
+				"proje",
+				"Project: Add Folder"
+			],
+			[
+				"project",
+				"ProjectTreeTemplater: Run"
+			],
+			[
+				"pro",
+				"Project: Edit Project"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"alignme",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"picker",
+				"Color Picker"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"all",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"linter",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"all err",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"bookma",
+				"Bookmarks: Select All"
+			],
+			[
+				"marks",
+				"SublimeLinter: Choose Mark Style"
+			],
+			[
+				"ss",
+				"SublimeREPL: Scheme"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"gnu",
+				"SublimeREPL: gnuplot"
+			],
+			[
+				"gnuol",
+				"SublimeREPL: gnuplot"
+			],
+			[
+				"gn",
+				"SublimeREPL: gnuplot"
+			],
+			[
+				"replbash",
+				"SublimeREPL: Bash"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"ssbash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"replsh",
+				"SublimeREPL: Shell"
+			],
+			[
+				"pac",
+				"Package Control: List Unmanaged Packages"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"ssma",
+				"Set Syntax: MATLAB"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"replgn",
+				"SublimeREPL: gnuplot"
+			],
+			[
+				"replgnu",
+				"SublimeREPL: gnuplot"
+			],
+			[
+				"ssgnu",
+				"Set Syntax: gnuplot"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"ssetting",
+				"Preferences: Settings - User"
+			],
+			[
+				"replocta",
+				"SublimeREPL: Octave"
+			],
+			[
+				"replo",
+				"SublimeREPL: Octave"
+			],
+			[
+				"reploca",
+				"SublimeREPL: Octave"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"error",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"err",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"linterdis",
+				"SublimeLinter: Disable Linter"
+			],
+			[
+				"linterwarn",
+				"SublimeLinter: Make Warnings Passive"
+			],
+			[
+				"linterenab",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"linterdi",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"linteren",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"lintersett",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"gistopen",
+				"Gist: Open Gist"
+			],
+			[
+				"github",
+				"GitHub: Blame (master)"
+			],
+			[
+				"githubvi",
+				"GitHub: View"
+			],
+			[
+				"githubview",
+				"GitHub: View"
+			],
+			[
+				"githubhs",
+				"GitHub: History (master)"
+			],
+			[
+				"githu",
+				"Github: Open File"
+			],
+			[
+				"git remote",
+				"Git: Remote"
+			],
+			[
+				"filed",
+				"FileDialog: Open"
+			],
+			[
+				"filedia",
+				"FileDialog: Open"
+			],
+			[
+				"git ",
+				"Git: Log"
+			],
+			[
+				"git hist",
+				"Github: History"
+			],
+			[
+				"git show",
+				"Git: Show"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"remove pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"file",
+				"FileDialog: Open"
+			],
+			[
+				"open",
+				"FileDialog: Open"
+			],
+			[
+				"git pull ",
+				"Git: Pull"
+			],
+			[
+				"git ini",
+				"Git: Init"
+			],
+			[
+				"new",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"repls",
+				"SublimeREPL: PowerShell"
+			],
+			[
+				"repl",
+				"SublimeREPL: Python"
+			],
+			[
+				"replr",
+				"SublimeREPL: R"
+			],
+			[
+				"dia",
+				"FileDialog: Open"
+			],
+			[
+				"saveas",
+				"FileDialog: Save as..."
+			],
+			[
+				"rename",
+				"FileDialog: Rename"
+			],
+			[
+				"rena",
+				"FileDialog: Rename"
+			],
+			[
+				"dialo",
+				"FileDialog: Open"
+			],
+			[
+				"file dia",
+				"FileDialog: Open"
+			],
+			[
+				"snippet",
+				"Snippets: Open snippet"
+			],
+			[
+				"mnager",
+				"SnippetManager: List"
+			],
+			[
+				"create",
+				"SnippetManager: Create"
+			],
+			[
+				"cre",
+				"SnippetManager: Create"
+			],
+			[
+				"creat",
+				"SnippetManager: Create"
+			],
+			[
+				"manager",
+				"SnippetManager: Create"
+			],
+			[
+				"snippet cre",
+				"SnippetManager: Create"
+			],
+			[
+				"sta",
+				"StatusMessage: Show scope name"
+			],
+			[
+				"stat",
+				"StatusMessage: Toggle default status"
+			],
+			[
+				"status",
+				"StatusMessage: Show scope name"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"dele",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"langu",
+				"Dictionaries: Set Language"
+			],
+			[
+				"d",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"del",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"delete",
+				"LaTexTools: Delete temporary files"
+			],
+			[
+				"side",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"ma",
+				"Project Manager: Remove Project"
+			],
+			[
+				"addpr",
+				"Project Manager: Add Project"
+			],
+			[
+				"projec",
+				"Project Manager: Add Project"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"sett",
+				"Preferences: Settings - User"
+			],
+			[
+				"sidebar",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"term",
+				"Preferences: Terminal Key Bindings – User"
+			],
+			[
+				"keybin",
+				"Preferences: Terminal Key Bindings – Default"
+			],
+			[
+				"keb",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"ke",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"packasett",
+				"Preferences: Package Control Settings – User"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/lyrahgames/pro/p-dkv"
+	],
+	"file_history":
+	[
+		"/home/lyrahgames/tmp/test/test.gp",
+		"/home/lyrahgames/tmp/test/.gitignore",
+		"/home/lyrahgames/tmp/test/template.stprj",
+		"/tmp/template.stprj",
+		"/home/lyrahgames/tmp/pro-temp-test/pro-temp-test.stprj",
+		"/home/lyrahgames/tmp/view-test/test.cpp",
+		"/home/lyrahgames/tmp/view-test/src/main.cpp",
+		"/home/lyrahgames/tmp/view-test/view-test.sublime-project",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Alignment/Default (Linux).sublime-keymap",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Base File.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Alignment/Base File.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/ColorPicker/ColorPicker.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/ColorPicker.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/AutoFileName/autofilename.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/EasyClangComplete.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/EasyClangComplete/EasyClangComplete.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeGit.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Gist.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Gist/Gist.sublime-settings",
+		"/tmp/epslatex-init.gp",
+		"/home/lyrahgames/tmp/view-test/test.gp",
+		"/home/lyrahgames/tmp/view-test/new.gp",
+		"/home/lyrahgames/tmp/view-test/test.tex",
+		"/home/lyrahgames/tmp/view-test/gp-test.gpc",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeREPL/config/gnuplot/Default.sublime-commands",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeREPL/config/bash/Main.sublime-menu",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeREPL/config/bash/Default.sublime-commands",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/SublimeREPL/config/gnuplot/Menu.sublime-menu",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/SublimeREPL/SublimeREPL.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/lyrahgames/tmp/view-test/oc.m",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/JSON.sublime-settings",
+		"/home/lyrahgames/tmp/view-test/src/render/camera.h",
+		"/home/lyrahgames/tmp/view-test/pro-files/linux/config.pro",
+		"/home/lyrahgames/tmp/view-test/src/xmath/mat4.h",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/lyrahgames/tmp/view-test/test.gpc",
+		"/home/lyrahgames/tmp/view-test/test.gpxc",
+		"/tmp/main.cpp",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/sublime-github/GitHub.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/GitHub.sublime-settings",
+		"/home/lyrahgames/tmp/view-test/src/gui/control.cpp",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Git/Git.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Gist/Default (Linux).sublime-keymap",
+		"/home/lyrahgames/pro/latex-test/main.tex",
+		"/home/lyrahgames/pro/latex-test/test/test.tex",
+		"/home/lyrahgames/pro/latex-test/main.synctex.gz",
+		"/home/lyrahgames/pro/latex-test/latex-test.sublime-project",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/lyrahgames/cl",
+		"/home/lyrahgames/pro/latex-test/test.tex",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/tex/fig .sublime-snippet-enhanced",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Project Manager/Project Manager.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Project Manager.sublime-settings",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/lyrahgames/.config/sublime-text-3/Packages/User/Package Control.sublime-settings"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"false",
+			"args",
+			"false",
+			"caption",
+			"out",
+			"output.exec",
+			"output.exex",
+			"show_panel",
+			"panel",
+			"show_panel_on_build",
+			"war",
+			"<",
+			"options",
+			"command",
+			"simple",
+			"latexmk",
+			"script",
+			"latexmk"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 114.0
+	},
+	"output.git-init":
+	{
+		"height": 114.0
+	},
+	"output.git-pull":
+	{
+		"height": 120.0
+	},
+	"pinned_build_system": "",
+	"project": "p-dkv.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git",
+				".gitignore"
+			],
+			[
+				"te",
+				"test.cpp"
+			],
+			[
+				"main",
+				"src/main.cpp"
+			],
+			[
+				"gp",
+				"test.gp"
+			],
+			[
+				"test.te",
+				"test.tex"
+			],
+			[
+				"gpc",
+				"gp-test.gpc"
+			],
+			[
+				"coman",
+				"~/.config/sublime-text-3/Packages/User/SublimeREPL/config/bash/Default.sublime-commands"
+			],
+			[
+				"comman",
+				"~/.config/sublime-text-3/Packages/User/SublimeREPL/config/gnuplot/Default.sublime-commands"
+			],
+			[
+				"settings",
+				"~/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings"
+			],
+			[
+				"gpte",
+				"gp-test.gpc"
+			],
+			[
+				"repl",
+				"*REPL* [shell]"
+			],
+			[
+				"cam",
+				"src/render/camera.h"
+			],
+			[
+				"confi",
+				"pro-files/linux/config.pro"
+			],
+			[
+				"ma",
+				"src/xmath/mat4.h"
+			],
+			[
+				"mai",
+				"src/main.cpp"
+			],
+			[
+				"co",
+				"pro-files/linux/config.pro"
+			],
+			[
+				"gptes",
+				"gp-test.gpc"
+			],
+			[
+				"test",
+				"test.gpc"
+			],
+			[
+				"view",
+				"view-test.sublime-project"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/tmp/view-test/view-test.sublime-project"
+			],
+			[
+				"lina",
+				"~/pro/lina2-tex/lina2.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
