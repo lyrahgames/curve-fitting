@@ -1,4 +1,3 @@
-#hier ein neuer kommentar
 TARGET = exp-model-2.exe
 
 HEADERS = \
