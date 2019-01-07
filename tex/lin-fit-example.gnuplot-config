@@ -1,0 +1,17 @@
+set terminal epslatex size 12cm, 7cm
+set output "lin-fit-example.tex"
+
+set xl '$x$'
+set yl '$y$'
+
+set key box
+set key left
+set key height 1
+set key width -5
+set key spacing 1.2
+
+f(x) = a*x
+fit f(x) 'code/rand-lin-data' using 1:2 via a
+
+plot 'code/rand-lin-data' using 1:2 with points pt 13 title '\footnotesize Messwerte'\
+	,f(x) lw 5 lt 1 lc rgb "red" title '\footnotesize Ausgleichsgerade'

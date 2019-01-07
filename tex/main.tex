@@ -1,0 +1,196 @@
+\input{pre}
+
+\newcommand{\transp}[1]{{#1}^\m{T}}
+
+\begin{document}
+	
+	\articletitle
+
+	\section{Mathematische Grundlagen} % (fold)
+	\label{sec:mathematische_grundlagen}
+
+		\subsection{Idee und Problemstellung} % (fold)
+		\label{sub:idee_und_problemstellung}
+		
+			Seien $n\in\SN$ und $x,y\in\SR^n$, sodass die folgenden Terme Messwerte eines Versuches darstellen.
+			\[ (x_i,y_i) \qquad \text{für alle } i\in\SN,i\leq n \]
+			Weiterhin sei nun $m\in\SN$ mit $m\leq n$.
+			Man gehe nun davon aus, dass der Zusammenhang zwischen $y$ und $x$ näherungsweise für mindestens einen Parametervektor $\lambda\in\SR^m$ durch die nachstehende Funktion bestimmt ist.
+			\[ p:\SR\times\SR^m\longrightarrow\SR,\qquad y_i\approx p(x_i,\lambda) \quad \text{für alle } i\in\SN,i\leq n \]
+			Das Ziel ist es nun einen Parametervektor $\lambda^\star\in\SR^m$ zu finden, der die Messwerte \glqq am besten\grqq\ mit der gegebenen Parameterfunktion $p$ approximiert.
+			Hierfür könnte man die Summe der Quadrate der Differenzen minimieren (auch Methode der kleinsten Quadrate).
+			\[ \min\set{\sum_{i=1}^n \boxb{ y_i - p(x_i,\lambda) }^2}{\lambda\in\SR^m} \]
+			Der dann bestimmbare Zusammenhang
+			\[ f:\SR\longrightarrow\SR,\qquad f(x):=p(x,\lambda^\star) \]
+			beschreibt im Sinne der Methode der kleinsten Quadrate gerade die beste Approximation der Messwerte im Bezug auf die Parameterfunktion $p$.
+			Ein Beispiel ist gerade in Abbildung \ref{fig:fit-example} gegeben.
+
+			\begin{figure}[h]
+				\center
+				\input{nonlin-fit-example}
+				\caption{Beispiel eines nichtlinearen Ausgleichsproblems mit einem freiem Parameter $a$, gegebenen Messwerten und der besten Approximation $f$ mit $a=3.01134$}
+				\label{fig:fit-example}
+			\end{figure}
+
+		% subsection idee_und_problemstellung (end)
+
+		\subsection{Das Ausgleichsproblem} % (fold)
+		\label{sub:das_ausgleichsproblem}
+		
+			Betrachtet man die obige Problemstellung, ist es hilfreich eine etwas allgemeinere Definition des Ausgleichsproblems zu geben.
+			Denn es lassen sich viele Problemstellungen auf ein Solches zurückführen.
+			Die Verallgemeinerung soll jedoch darauf beschränkt werden, dass eine beste Approximation gerade im Sinne der Methode der kleinsten Quadrate zu verstehen ist.
+			\bigskip
+
+			\begin{definition*}[Ausgleichsproblem, Methode der kleinsten Quadrate]
+				Für $n,m\in\SN, m\leq n$, eine gegebene Parametermenge $U\subset\SR^m$ und eine gegebene Residuen-Funktion $r:U\longrightarrow\SR^n$ ist das Ausgleichsproblem definiert durch
+				\[ \min \set{\norm{r(\lambda)}^2_2}{\lambda\in U} \]
+			\end{definition*}
+
+		% subsection das_ausgleichsproblem (end)
+
+	% section mathematische_grundlagen (end)
+
+	\section{Lösungsverfahren} % (fold)
+	\label{sec:l_sungsverfahren}
+	
+		Im Folgenden seien nun immer $n,m\in\SN, m\leq n$, $U\subset\SR^m$ die gegebene Parametermenge und $r:U\longrightarrow\SR^n$ die Residuen-Funktion, wenn nicht anders behauptet.
+		Da wir hier, wie bereits gesagt, nur die Methode der kleinsten Quadrate anwenden, ist es durchaus sinnvoll noch die folgende Funktion zu definieren.
+		\[ s:U\longrightarrow[0,\infty),\qquad s := \tfrac{1}{2}\norm{r}_2^2 = \tfrac{1}{2}\transp{r}r \]
+		Ist $s$ zweimal stetig differenzierbar, folgt durch Ausrechnen
+		\begin{alignat*}{3}
+			\nabla s = \transp{\curvb{\Deriv r}}r,\qquad \Deriv\curvb{\nabla s} = \transp{\curvb{\Deriv r}}\Deriv r + \sum_{i=1}^n r_i \Deriv^2r_i
+		\end{alignat*}
+
+		\subsection{Gauß-Newton-Verfahren} % (fold)
+		\label{sub:gau_newton_verfahren}
+		
+			Das Gauß-Newton-Verfahren ist ein sogenanntes Quasi-Newton-Verfahren.
+			Die grundsätzliche Idee besteht darin, das gegebene Ausgleichsproblem in ein nichtlineares Gleichungssystem umzuformulieren.
+			Dieses würde sich dann mit dem bereits bekannten Newton-Verfahren lösen lassen.\\
+
+			Nun zu den Details.
+			Wir betrachten ein zwangloses System $U=\SR^m$ von Parametern.
+			$r$ sei zweimal stetig differenzierbar.
+			Die Lösung des Ausgleichsproblems soll hier gerade durch das Auffinden eines lokalen Minimums $\lambda^\star\in U$ mit den folgenden hinreichenden Bedingungen gegeben sein.
+			\begin{tcolorbox}[title=Bedingungen für Minimum, top=0mm]
+				\begin{equation}
+				\label{eq:gn cond 1}
+					\nabla s(\lambda^\star) = 0
+				\end{equation}
+				\begin{equation}
+					\Deriv\curvb{\nabla s}(\lambda^\star) \text{ ist positiv definit}
+				\end{equation}
+			\end{tcolorbox}
+			Durch Einsetzen von $s$ in Bedingung (\ref{eq:gn cond 1}) ergibt sich für das gerade definierte $\lambda^\star\in U$
+			\[ \boxb{\transp{\curvb{\Deriv r}}r}\curvb{\lambda^\star} = 0 \]
+			Dies ist nun ein nichtlineares Gleichungssystem, welches mithilfe des Newton-Verfahren gelöst werden kann.
+			Für den $k$-ten Iterationsschritt mit $k\in\SN$ folgt also
+			\[ \lambda^{(k+1)} = \lambda^{(k)} + \xi^{(k)} \]
+			\[ \boxb{ \transp{\curvb{\Deriv r}}\Deriv r + \sum_{i=1}^n r_i \Deriv^2r_i }\curvb{\lambda^{(k)}} \xi^{(k)} = -\boxb{ \transp{\curvb{\Deriv r}}r }\curvb{\lambda^{(k)}} \]
+			Um sich die aufwendige Berechnung der zweiten Ableitung zu sparen, geht man davon aus, dass $r\curvb{\lambda^\star}\approx 0$.
+			Damit kann also die Berechnung von $\xi^{(k)}$ in einer geeigneten Umgebung von $\lambda^\star$ durch folgendes ersetzt werden.
+			\[ \boxb{ \transp{\curvb{\Deriv r}}\Deriv r }\curvb{\lambda^{(k)}} \xi^{(k)} = -\boxb{ \transp{\curvb{\Deriv r}}r }\curvb{\lambda^{(k)}} \]
+
+			\begin{tcolorbox}[colframe=black,colbacktitle=white,coltitle=black, attach boxed title to top center={yshift=-2mm},enhanced, titlerule=0.1pt, boxrule=0.5pt, breakable, arc=5pt,title=Algorithmus:\quad Gauß-Newton-Verfahren]
+				Eingabe: $r:\SR^m\longrightarrow\SR^n,\quad \lambda^{(0)}\in\SR^m$
+
+				\begin{enumerate}[label=\normalfont (\arabic*)]
+					\item Setze $k=0$.
+					\item Berechne $r\curvb{\lambda^{(k)}}, \Deriv r\curvb{\lambda^{(k)}}$.
+					\label{schritt}
+					\item Bestimme den Korrekturvektor $\xi^{(k)}$ gemäß
+						\[ \boxb{ \transp{\curvb{\Deriv r}}\Deriv r }\curvb{\lambda^{(k)}} \xi^{(k)} = -\boxb{ \transp{\curvb{\Deriv r}}r }\curvb{\lambda^{(k)}} \]
+					\item Setze $\lambda^{(k+1)} = \lambda^{(k)} + \xi^{(k)}$.
+					\item Setze $k=k+1$.
+					\item Gehe zu Schritt \ref{schritt}, wenn
+						\[ k < k_\m{max} \quad \wedge \quad \norm{\xi^{(k)}}_2^2 > \delta_\m{min} \]
+				\end{enumerate}
+			\end{tcolorbox}
+
+		% subsection gau_newton_verfahren (end)
+
+		\subsection{Levenberg-Marquardt-Verfahren} % (fold)
+		\label{sub:levenberg_marquardt_verfahren}
+		
+			Das Levenberg-Marquardt-Verfahren stellt eine Erweiterung des Gauß-Newton-Verfahrens dar.
+
+
+			\begin{tcolorbox}[colframe=black,colbacktitle=white,coltitle=black, attach boxed title to top center={yshift=-2mm},enhanced, titlerule=0.1pt, boxrule=0.5pt, breakable, arc=5pt,title=Algorithmus:\quad Levenberg-Marquardt-Verfahren]
+				Eingabe: $r:\SR^m\longrightarrow\SR^n,\quad \lambda^{(0)}\in\SR^m$
+
+				\begin{enumerate}[label=\normalfont (\arabic*)]
+					\item Setze $k=0$.
+					\item Berechne $r\curvb{\lambda^{(k)}}, \Deriv r\curvb{\lambda^{(k)}}$.
+					\label{lm-schritt}
+					\item 
+					\label{lm-corr}
+					Bestimme den Korrekturvektor $\xi^{(k)}$ gemäß
+						\[ \boxb{ \transp{\curvb{\Deriv r}}\Deriv r + \mu^2\idmat }\curvb{\lambda^{(k)}} \xi^{(k)} = -\boxb{ \transp{\curvb{\Deriv r}}r }\curvb{\lambda^{(k)}} \]
+					\item Berechne $\varepsilon_\mu$ und teste, ob die Korrektur akzeptabel ist.
+						\[ \varepsilon_\mu = \frac{ \norm{r\curvb{\lambda^{(k)}}}^2_2 - \norm{r\curvb{\lambda^{(k)}+\xi^{(k)}}}^2_2 }{ \norm{r\curvb{\lambda^{(k)}}}^2_2 - \norm{r\curvb{\lambda^{(k)}} + \Deriv r\curvb{\lambda^{(k)}}\xi^{(k)}}^2_2 } \]
+						\begin{enumerate}[label=\normalfont (\roman*)]
+							\item Fall $\varepsilon_\mu \leq \beta_0$: Setze $\mu = 2\mu$ und gehe zu \ref{lm-corr}.
+							\item Fall $\varepsilon_\mu \geq \beta_1$: Setze $\mu = \frac{\mu}{2}$.
+						\end{enumerate}
+					\item Setze $\lambda^{(k+1)} = \lambda^{(k)} + \xi^{(k)}$.
+					\item Setze $k=k+1$.
+					\item Gehe zu Schritt \ref{lm-schritt}, wenn
+						\[ k < k_\m{max} \quad \wedge \quad \norm{\xi^{(k)}}_2^2 > \delta_\m{min} \]
+				\end{enumerate}
+			\end{tcolorbox}
+
+		% subsection levenberg_marquardt_verfahren (end)
+
+		\subsection{Simulated Annealing} % (fold)
+		\label{sub:simulated_annealing}
+
+			Simulated Annealing stellt ein Verfahren dar, welches im Vergleich zu den zuvor genannten Verfahren ein anderen Ansatz verfolgt.
+			Anstatt sich auf das lokale Minimum zu beschränken, versucht es mithilfe von Zufallszahlen das globale Minimum ausfindig zu machen.
+			
+		
+			\begin{tcolorbox}[colframe=black,colbacktitle=white,coltitle=black, attach boxed title to top center={yshift=-2mm},enhanced, titlerule=0.1pt, boxrule=0.5pt, breakable, arc=5pt,title=Algorithmus:\quad Simulated Annealing]
+				Eingabe: $r:\SR^m\longrightarrow\SR^n,\quad \lambda_0\in\SR^m$
+
+				\begin{enumerate}[label=\normalfont (\arabic*)]
+					\item Berechne $c_0 = \norm{ r\curvb{ \lambda_0 } }_2^2$.
+					\item Setze $T = T_0$ und $i=0$.
+					\item \label{sa-for} Bestimme einen zufälligen Parameter $\lambda_1$.
+					\item Berechne $c_1 = \norm{ r\curvb{ \lambda_1 } }_2^2$.
+					\item
+						\begin{itemize}
+							\item Fall $c_1 < c_2$: Setze $\lambda_0 = \lambda_1$.
+							\item Fall $c_1 \geq c_2$: Berechne
+								\[ p = \exp\curvb{ \frac{c_0 - c_1}{T} } \]
+								und setze $\lambda_0 = \lambda_1$ mit Wahrscheinlichkeit $p$. 
+						\end{itemize}
+					\item Setze $i=i+1$ und gehe zu Schritt \ref{sa-for}, wenn $i < i_\m{max}$.
+					\item Setze $T=\alpha T$ und gehe zu Schritt \ref{sa-for}, wenn $T > T_\m{min}$.
+				\end{enumerate}
+			\end{tcolorbox}
+
+			\begin{tcolorbox}[colframe=black,colbacktitle=white,coltitle=black, attach boxed title to top center={yshift=-2mm},enhanced, titlerule=0.1pt, boxrule=0.5pt, breakable, arc=5pt,title=C++-Implementierung:\quad Curve Fitting mit Simulated Annealing]
+				\lstinputlisting[style = std, language=c++]{../code/src/sa-fit.cpp}
+			\end{tcolorbox}
+
+		% subsection simulated_annealing (end)
+
+	% section l_sungsverfahren (end)
+
+	\section{Referenzen} % (fold)
+	\label{sec:referenzen}
+
+		\begin{itemize}[label=$\circ$]
+			\item Hermann, \textit{Numerische Mathematik}, 3.Auflage
+			\item \url{http://en.wikipedia.org/wiki/Gauss-Newton_algorithm}
+			\item \url{http://en.wikipedia.org/wiki/Levenberg-Marquardt_algorithm}
+			\item \url{http://en.wikipedia.org/wiki/Simulated_annealing}
+			\item Funken, \textit{Numerik III}, Skript Universität Ulm, 2012/2013
+			\item \url{katrinaeg.com/simulated-annealing.html}
+			\item Kincaid und Cheney, \textit{Numerical Analysis}, 3.Edition
+		\end{itemize}
+
+	% section referenzen (end)
+
+\end{document}
+	

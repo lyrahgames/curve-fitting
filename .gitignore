@@ -1,0 +1,16 @@
+*
+!*/
+
+!pro-files/**
+!src/data/**
+
+!*.pdf
+!*.tex
+!*.eps
+!*.gnuplot-config
+!*.cpp
+!*.h
+
+!CMakeLists.txt
+!README.md
+!.gitignore
